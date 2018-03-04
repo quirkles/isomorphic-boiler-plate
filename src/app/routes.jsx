@@ -1,5 +1,6 @@
 import Home from './containers/Home';
 import List from './containers/List';
+import Signup from './containers/Signup';
 import App from './containers/App';
 
 const routes = [
@@ -14,6 +15,10 @@ const routes = [
       {
         path: '/list',
         component: List,
+      },
+      {
+        path: '/signup',
+        component: Signup,
       },
     ],
   },

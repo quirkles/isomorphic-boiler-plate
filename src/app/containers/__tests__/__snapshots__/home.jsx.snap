@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component Renders without errors and matches snapshot 1`] = `
+<Home>
+  <div>
+    Hello world
+  </div>
+</Home>
+`;

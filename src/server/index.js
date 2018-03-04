@@ -7,6 +7,8 @@ import registerServerSideRenderMiddleware from './middlewares/registerServerSide
 
 const app = express();
 
-pipe(registerCommonMiddleware, registerServerSideRenderMiddleware, startApp)(
-  app,
-);
+export default pipe(
+  registerCommonMiddleware,
+  registerServerSideRenderMiddleware,
+  startApp,
+)(app);

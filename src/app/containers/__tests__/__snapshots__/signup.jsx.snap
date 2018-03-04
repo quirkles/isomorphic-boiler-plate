@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signup component Renders without errors and matches snapshot 1`] = `
+<Signup>
+  <div>
+    <h3>
+      Sign up
+    </h3>
+    <div>
+      <form>
+        <input
+          name="email"
+          placeholder="email"
+          type="text"
+        />
+        <input
+          name="password"
+          placeholder="password"
+          type="password"
+        />
+        <input
+          name="confirm"
+          placeholder="Confirm password"
+          type="text"
+        />
+        <button>
+          Sign up
+        </button>
+        <p>
+          or
+        </p>
+        <button>
+          Sign up with Facebook
+        </button>
+      </form>
+    </div>
+  </div>
+</Signup>
+`;

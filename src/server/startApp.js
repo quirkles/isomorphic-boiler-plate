@@ -1,4 +1,3 @@
-/* globals process*/
 import logger from './logger';
 import config from './config';
 
@@ -11,9 +10,6 @@ const startApplication = app => {
 
   app.listen(port, () => {
     logger.info(`${displayName} listening on port ${port}`);
-    if (process.env.APP_ENV === 'development') {
-      logger.info(`Please visit: http://localhost:${port}`);
-    }
   });
 };
 

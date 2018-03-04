@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`client bootstrap renders the dom tree and hydrates the initial state 1`] = `
+<Provider
+  store="{\\"reducers\\":\\"REDUCERS\\",\\"middleware\\":\\"\\\\\\"routerMiddleware with \\\\\\\\\\\\\\"BROWSER_HISTORY\\\\\\\\\\\\\\"\\\\\\"\\"}"
+>
+  <Router
+    history="BROWSER_HISTORY"
+  >
+    <div>
+      "ROUTES"
+    </div>
+  </Router>
+</Provider>
+`;

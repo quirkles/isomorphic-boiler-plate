@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App container Renders with route and matches snapshot 1`] = `
+<App
+  route={
+    Object {
+      "routes": Array [
+        Object {
+          "component": [Function],
+          "path": "/home",
+        },
+      ],
+    }
+  }
+>
+  <div>
+    <ul>
+      <li>
+        <NavLink
+          to="/home"
+        >
+          <a
+            href="/home"
+          >
+            home
+          </a>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/list"
+        >
+          <a
+            href="/list"
+          >
+            list
+          </a>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/signup"
+        >
+          <a
+            href="/signup"
+          >
+            Sign up
+          </a>
+        </NavLink>
+      </li>
+    </ul>
+    <div>
+      <div>
+        [{"path":"/home"}]
+      </div>
+    </div>
+  </div>
+</App>
+`;

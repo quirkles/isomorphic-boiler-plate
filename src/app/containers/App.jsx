@@ -12,14 +12,18 @@ const App = ({ route }) => (
       <li>
         <NavLink to="/list">list</NavLink>
       </li>
+      <li>
+        <NavLink to="/signup">Sign up</NavLink>
+      </li>
     </ul>
     <div>{renderRoutes(route.routes)}</div>
   </div>
 );
 
 App.propTypes = {
-  children: propTypes.arrayOf(propTypes.node),
-  route: propTypes.object.isRequired,
+  route: propTypes.shape({
+    routes: propTypes.array.isRequired,
+  }).isRequired,
 };
 
 export default App;

@@ -1,7 +1,7 @@
-/* globals document */
+/* globals document, window */
 
 import React from 'react';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router';
@@ -18,7 +18,12 @@ const middleware = routerMiddleware(history);
 
 const rootEl = document.getElementById('app');
 
-const store = createStore(reducers, applyMiddleware(middleware));
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(
+  reducers,
+  composeEnhancers(applyMiddleware(middleware)),
+);
 
 /*
 configureStore takes 3 args, the root reducer, init store state, and additional middlewares
@@ -26,9 +31,10 @@ by default, configureStore comes with redux-logger middleware. Here we
 registering our fetchMiddleware
 */
 
-ReactDOM.hydrate(
+export const getDomTree = () => (
   <Provider store={store}>
     <Router history={history}>{renderRoutes(routes)}</Router>
-  </Provider>,
-  rootEl,
+  </Provider>
 );
+
+ReactDOM.hydrate(getDomTree(), rootEl);
